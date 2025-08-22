@@ -30,3 +30,12 @@ go.work.sum
 # Editor/IDE
 # .idea/
 # .vscode/
+
+# Agent memory data files
+data/
+examples/*/data/
+*.json
+
+# Temporary files  
+tmp/
+temp/
