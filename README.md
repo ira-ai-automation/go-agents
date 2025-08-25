@@ -15,6 +15,7 @@ A powerful and flexible agent-based system library for Go that leverages gorouti
 - 📝 **Structured Logging**: Flexible logging system with multiple output formats
 - ⚙️ **Configuration**: Type-safe configuration management
 - 🔄 **Context Management**: Hierarchical context management with cancellation support
+- 🔧 **Tool Integration**: Extensible tool system with built-in file system, HTTP, and MCP support
 
 ## Quick Start
 
@@ -233,6 +234,58 @@ func main() {
 }
 ```
 
+### Tool-Enabled Agents
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+
+    "github.com/ira-ai-automation/go-agents/agent"
+    "github.com/ira-ai-automation/go-agents/llm"
+    "github.com/ira-ai-automation/go-agents/tools"
+    "github.com/ira-ai-automation/go-agents/tools/builtin"
+)
+
+func main() {
+    // Setup LLM manager
+    llmManager := llm.NewManager()
+    // ... register LLM providers
+
+    // Setup tools
+    toolRegistry := tools.NewBaseToolRegistry()
+    toolConfig := tools.DefaultToolConfig()
+    toolExecutor := tools.NewBaseToolExecutor(toolRegistry, toolConfig)
+
+    // Register built-in tools
+    fsTools := builtin.NewFileSystemTool("./workspace")
+    httpTool := builtin.NewHTTPTool(30*time.Second, 1024*1024)
+    toolRegistry.Register(fsTools)
+    toolRegistry.Register(httpTool)
+
+    // Create tool-enabled agent
+    systemPrompt := `You are an AI assistant with access to file system and web tools.
+    Help users by reading files, making web requests, and processing data.`
+
+    toolAgent := agent.NewSimpleToolLLMAgent(
+        "assistant",
+        systemPrompt,
+        llmManager,
+        toolExecutor,
+    )
+
+    ctx := context.Background()
+    toolAgent.Start(ctx)
+
+    // The agent can now use tools automatically based on LLM responses
+    fmt.Printf("Available tools: %v\n", toolAgent.ListAvailableTools())
+    
+    toolAgent.Stop()
+}
+```
+
 ## Core Components
 
 ### Agent Interface
@@ -410,6 +463,7 @@ Check out the `/examples` directory for complete working examples:
 - `multi_agent_system/`: Producer-consumer system with multiple agents
 - `llm_agents/`: LLM-powered agents with multiple provider support
 - `memory_agents/`: Advanced memory, RAG, and knowledge base examples
+- `tool_agents/`: Tool-enabled agents with file system and web capabilities
 
 ## Best Practices
 
@@ -502,8 +556,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [x] **Advanced Memory**: Persistent storage, cache, and vector search
 - [x] **RAG System**: Retrieval-Augmented Generation with semantic search
 - [x] **Vector Embeddings**: Local and OpenAI embedding providers
+- [x] **Tool Integration**: Built-in tools (filesystem, HTTP) and MCP client support
 - [ ] **Additional LLM Providers**: Google Gemini, Groq, local Hugging Face models
-- [ ] **Function Calling**: Tool/function calling support for LLM agents
 - [ ] **Network-based Communication**: Agent communication across networks
 - [ ] **Distributed Systems**: Multi-node agent deployments
 - [ ] **Performance Monitoring**: Real-time metrics and dashboards
