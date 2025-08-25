@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/agentarium/core/llm"
+	"github.com/ira-ai-automation/go-agents/llm"
 )
 
 // OllamaProvider implements the LLM Provider interface for Ollama (local LLMs).

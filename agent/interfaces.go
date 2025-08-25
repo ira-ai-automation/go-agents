@@ -5,7 +5,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/agentarium/core/llm"
+	"github.com/ira-ai-automation/go-agents/llm"
 )
 
 // Agent represents the core interface that all agents must implement.

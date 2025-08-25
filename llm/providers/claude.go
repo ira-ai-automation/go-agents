@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/agentarium/core/llm"
+	"github.com/ira-ai-automation/go-agents/llm"
 )
 
 // ClaudeProvider implements the LLM Provider interface for Anthropic's Claude API.

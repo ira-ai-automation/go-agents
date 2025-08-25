@@ -1,4 +1,4 @@
-# Agentarium Core
+# Go Agents
 
 A powerful and flexible agent-based system library for Go that leverages goroutines for high-performance concurrent agent execution.
 
@@ -22,7 +22,7 @@ A powerful and flexible agent-based system library for Go that leverages gorouti
 
 ```bash
 go mod init your-project
-go get github.com/agentarium/core
+go get github.com/ira-ai-automation/go-agents
 ```
 
 ### Basic Agent Example
@@ -35,7 +35,7 @@ import (
     "log"
     "time"
     
-    "github.com/agentarium/core/agent"
+    "github.com/ira-ai-automation/go-agents/agent"
 )
 
 func main() {
@@ -83,7 +83,7 @@ import (
     "context"
     "fmt"
     
-    "github.com/agentarium/core/agent"
+    "github.com/ira-ai-automation/go-agents/agent"
 )
 
 func main() {
@@ -140,9 +140,9 @@ import (
     "fmt"
     "os"
     
-    "github.com/agentarium/core/agent"
-    "github.com/agentarium/core/llm"
-    "github.com/agentarium/core/llm/providers"
+    "github.com/ira-ai-automation/go-agents/agent"
+    "github.com/ira-ai-automation/go-agents/llm"
+    "github.com/ira-ai-automation/go-agents/llm/providers"
 )
 
 func main() {
@@ -190,9 +190,9 @@ import (
     "context"
     "fmt"
     
-    "github.com/agentarium/core/agent"
-    "github.com/agentarium/core/llm"
-    "github.com/agentarium/core/memory"
+    "github.com/ira-ai-automation/go-agents/agent"
+    "github.com/ira-ai-automation/go-agents/llm"
+    "github.com/ira-ai-automation/go-agents/memory"
 )
 
 func main() {
@@ -513,7 +513,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Support
 
-- 📖 **Documentation**: [docs.agentarium.dev](https://docs.agentarium.dev)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/agentarium/core/discussions)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/agentarium/core/issues)
-- 📧 **Email**: support@agentarium.dev
+- 📖 **Documentation**: [docs.go-agents.dev](https://docs.go-agents.dev)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/ira-ai-automation/go-agents/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/ira-ai-automation/go-agents/issues)
+- 📧 **Email**: support@ira-ai-automation.dev

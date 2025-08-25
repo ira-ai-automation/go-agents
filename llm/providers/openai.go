@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/agentarium/core/llm"
+	"github.com/ira-ai-automation/go-agents/llm"
 )
 
 // OpenAIProvider implements the LLM Provider interface for OpenAI API.

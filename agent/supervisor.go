@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/agentarium/core/llm"
+	"github.com/ira-ai-automation/go-agents/llm"
 	"golang.org/x/sync/errgroup"
 )
 

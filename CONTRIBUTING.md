@@ -1,6 +1,6 @@
-# Contributing to Agentarium Core
+# Contributing to Go Agents
 
-We welcome contributions to Agentarium Core! This document provides guidelines for contributing to the project.
+We welcome contributions to Go Agents! This document provides guidelines for contributing to the project.
 
 ## Table of Contents
 
@@ -26,14 +26,14 @@ We welcome contributions to Agentarium Core! This document provides guidelines f
 2. Clone your fork locally:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/agentarium-core.git
-cd agentarium-core
+git clone https://github.com/YOUR_USERNAME/go-agents.git
+cd go-agents
 ```
 
 3. Add the original repository as upstream:
 
 ```bash
-git remote add upstream https://github.com/ira-ai-automation/agentarium-core.git
+git remote add upstream https://github.com/ira-ai-automation/go-agents.git
 ```
 
 ## Development Setup
@@ -103,7 +103,7 @@ We welcome various types of contributions:
 ### Code Organization
 
 ```
-agentarium-core/
+go-agents/
 ├── agent/          # Core agent system
 ├── llm/            # LLM integration
 ├── memory/         # Memory and vector systems
@@ -357,4 +357,4 @@ If you have questions about contributing:
 3. Create a new discussion
 4. Reach out to maintainers
 
-Thank you for contributing to Agentarium Core! 🚀
+Thank you for contributing to Go Agents! 🚀

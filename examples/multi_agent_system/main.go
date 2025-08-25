@@ -7,7 +7,7 @@ import (
 	"math/rand"
 	"time"
 
-	"github.com/agentarium/core/agent"
+	"github.com/ira-ai-automation/go-agents/agent"
 )
 
 // ProducerAgent generates work items for consumer agents.

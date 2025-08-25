@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/agentarium/core/agent"
-	"github.com/agentarium/core/llm"
-	"github.com/agentarium/core/llm/providers"
+	"github.com/ira-ai-automation/go-agents/agent"
+	"github.com/ira-ai-automation/go-agents/llm"
+	"github.com/ira-ai-automation/go-agents/llm/providers"
 )
 
 func main() {

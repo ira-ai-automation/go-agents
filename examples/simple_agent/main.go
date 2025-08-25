@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/agentarium/core/agent"
+	"github.com/ira-ai-automation/go-agents/agent"
 )
 
 // SimpleTaskAgent demonstrates a basic agent that processes tasks.

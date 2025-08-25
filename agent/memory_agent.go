@@ -6,8 +6,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/agentarium/core/llm"
-	"github.com/agentarium/core/memory"
+	"github.com/ira-ai-automation/go-agents/llm"
+	"github.com/ira-ai-automation/go-agents/memory"
 )
 
 // MemoryLLMAgent extends LLMAgent with advanced memory capabilities including

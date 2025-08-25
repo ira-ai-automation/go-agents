@@ -8,15 +8,15 @@ import (
 	"strings"
 	"time"
 
-	"github.com/agentarium/core/agent"
-	"github.com/agentarium/core/llm"
-	"github.com/agentarium/core/llm/providers"
-	"github.com/agentarium/core/memory"
+	"github.com/ira-ai-automation/go-agents/agent"
+	"github.com/ira-ai-automation/go-agents/llm"
+	"github.com/ira-ai-automation/go-agents/llm/providers"
+	"github.com/ira-ai-automation/go-agents/memory"
 )
 
 func main() {
-	fmt.Println("Agentarium Core - Memory-Powered Agents Example")
-	fmt.Println("===============================================")
+	fmt.Println("Go Agents - Memory-Powered Agents Example")
+	fmt.Println("===========================================")
 	fmt.Println()
 
 	// Check for real LLM providers or use mock

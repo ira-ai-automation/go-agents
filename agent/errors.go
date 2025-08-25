@@ -192,8 +192,8 @@ func getStackTrace() string {
 	skip := 0
 
 	for i, line := range lines {
-		if strings.Contains(line, "github.com/agentarium/core/agent.getStackTrace") ||
-			strings.Contains(line, "github.com/agentarium/core/agent.NewAgentError") {
+		if strings.Contains(line, "github.com/ira-ai-automation/go-agents/agent.getStackTrace") ||
+			strings.Contains(line, "github.com/ira-ai-automation/go-agents/agent.NewAgentError") {
 			skip = i + 2 // Skip the function and its file line
 			continue
 		}

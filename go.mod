@@ -1,4 +1,4 @@
-module github.com/agentarium/core
+module github.com/ira-ai-automation/go-agents
 
 go 1.21
 
